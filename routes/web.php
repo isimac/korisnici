@@ -11,3 +11,5 @@ Route::get('/registracija', [KorisnikController::class, 'registracija']);
 Route::post('/registracija', [KorisnikController::class, 'spremiRegistraciju']);
 Route::get('/prijava', [KorisnikController::class, 'prijava'])->name('login');
 Route::post('/prijava', [KorisnikController::class, 'provjeriPrijavu']);
+Route::get('/profil', [KorisnikController::class, 'profil'])->middleware('auth');
+Route::post('/odjava', [KorisnikController::class, 'odjava'])->middleware('auth');

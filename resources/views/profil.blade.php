@@ -11,6 +11,10 @@
     <br>
     <p>Vaš email je {{auth()->user()->email}}</p>
 
+    <h2>Izbornik</h2>
+
+    <a href="/biljeske">Moje bilješke</a>
+
     <form action="/odjava" method="POST">
         @csrf
         <button type="submit">Odjavite se</button>

@@ -6,6 +6,8 @@ use Illuminate\Database\Eloquent\Model;
 
 class Biljeska extends Model
 {
+    public $timestamps=false;
+
     protected $table='biljeske';
 
     protected $fillable=['naslov', 'sadrzaj'];

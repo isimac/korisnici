@@ -10,6 +10,7 @@ class BiljeskaController extends Controller
     public function index()
     {
         $biljeske=auth()->user()->biljeske;
+        //select * from biljeske where user_id=1;
         return view('biljeske', ['biljeske' =>$biljeske]);
     }
 
@@ -42,5 +43,6 @@ class BiljeskaController extends Controller
     {
         abort_unless($biljeska->user_id==$request->user()->id, 403);
         $biljeska->delete();
+        return redirect('/biljeske');
     }
 }
